@@ -11,7 +11,7 @@ const ContactUsForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/contact/", {
+      await axios.post(`${process.env.BACKEND_URL}/api/contact/`, {
         name,
         email,
         description,
